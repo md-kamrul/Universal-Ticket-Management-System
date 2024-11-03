@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Login Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body class="text-white">
-  <div class="hero min-h-screen bg-base-200">
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">UTMS</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>LogIn</a></li>
+        <li><a>SignUp</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="hero h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <div class="text-center lg:text-left">
         <h1 class="text-5xl font-bold">Login to Your Account</h1>
@@ -34,4 +47,5 @@
     </div>
   </div>
 </body>
+
 </html>
