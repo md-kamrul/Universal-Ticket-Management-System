@@ -39,12 +39,51 @@
         </div>
 
         <!-- body -->
-        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20 h-full">
+        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20">
 
             <h1 class="font-bold text-3xl mb-10">Transaction History</h1>
 
-            <div class="w-full flex flex-col gap-10">
-                
+            <div class="w-full h-full min-h-screen">
+                <div class="overflow-x-auto">
+                    <table class="table table-zebra">
+                        <!-- head -->
+                        <thead class="bg-[#1bd1a4] text-white">
+                            <tr>
+                                <th></th>
+                                <th>Transaction ID</th>
+                                <th>Customer ID</th>
+                                <th>No of Ticket(Per Customer)</th>
+                                <th>Total Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <th>1</th>
+                                <td>241015t241020ntb301</td>
+                                <td>2024m1103c0000201</td>
+                                <td>2</td>
+                                <td>500</td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <th>2</th>
+                                <td>241015t241020ntt001</td>
+                                <td>2024m1103c0000252</td>
+                                <td>1</td>
+                                <td>250</td>
+                            </tr>
+                            <!-- row 3 -->
+                            <tr>
+                                <th>3</th>
+                                <td>241015t241020ntt001</td>
+                                <td>2023m1203c0000702</td>
+                                <td>4</td>
+                                <td>500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
