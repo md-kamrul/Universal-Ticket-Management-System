@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="text-white">
+<body class="text-white h-screen">
     <div class="w-full h-full bg-[#18191a] pb-10">
         <!-- navbar -->
         <div class="navbar bg-[#242526] shadow-2xl">
@@ -44,6 +44,27 @@
         <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20">
 
             <h1 class="font-bold text-3xl mb-10">Customer History</h1>
+
+            <div class="w-[80%] mx-auto flex flex-row gap-5 mb-10">
+                <div class="card bg-white text-black w-96 py-9">
+                    <div class="card-body flex flex-col items-center justify-center">
+                        <h2 class="font-bold text-xl">Purchased Tickets</h2>
+                      <h2 class="card-title font-bold text-5xl text-[#1bd1a4]">10</h2>
+                    </div>
+                  </div> 
+                <div class="card bg-white text-black w-96 py-9">
+                    <div class="card-body flex flex-col items-center justify-center">
+                        <h2 class="font-bold text-xl text-center">Total Amount for Purchasing Ticket</h2>
+                      <h2 class="card-title font-bold text-5xl text-[#1bd1a4]">1000 <span>Taka</span></h2>
+                    </div>
+                  </div>    
+                  <div class="card bg-white text-black w-96 py-9">
+                    <div class="card-body flex flex-col items-center justify-center">
+                        <h2 class="font-bold text-xl">Cancled Tickets</h2>
+                      <h2 class="card-title font-bold text-5xl text-[#FF0000]">0</h2>
+                    </div>
+                  </div>            
+            </div>
 
     </div>
 </body>
