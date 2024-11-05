@@ -41,9 +41,55 @@
         </div>
 
         <!-- body -->
-        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20">
+        <div class="w-[80%] mx-auto flex flex-col items-center pt-20 h-screen">
 
             <h1 class="font-bold text-3xl mb-10">Buy Your Ticket</h1>
+
+            <div class="overflow-x-auto w-full">
+                <table class="table table-zebra">
+                    <!-- head -->
+                    <thead class="bg-[#1bd1a4] text-white">
+                        <tr class="font-bold text-black">
+                            <th>Ticket Type</th>
+                            <th>Route</th>
+                            <th>Total Seats</th>
+                            <th>Price per Ticket</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                            <th>Bus</th>
+                            <td>Dhaka - Kishorganj</td>
+                            <td>55</td>
+                            <td>500</td>
+                            <td><button
+                                    class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <th>Train</th>
+                            <td>Dhaka - Kishorganj</td>
+                            <td>150</td>
+                            <td>250</td>
+                            <td><button
+                                    class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <th>Plane</th>
+                            <td>Dhaka - Kishorganj</td>
+                            <td>60</td>
+                            <td>500</td>
+                            <td><button
+                                    class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
     </div>
 </body>
