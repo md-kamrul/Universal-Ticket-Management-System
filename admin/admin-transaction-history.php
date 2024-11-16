@@ -13,18 +13,18 @@
         <!-- navbar -->
         <div class="navbar bg-[#242526] shadow-2xl">
             <div class="flex-1">
-                <a href="./admin-home.html" class="btn btn-ghost text-xl">UTMS</a>
+                <a href="./admin-home.php" class="btn btn-ghost text-xl">UTMS</a>
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal pl-1 pr-2 flex flex-row items-center">
-                    <li><a href="./admin-home.html">Home</a></li>
-                    <li><a href="./admin-add-ticket.html">Add Ticket</a></li>
-                    <li><a href="./admin-transaction-history.html" class="text-[#1bd1a4]">Transaction History</a></li>
-                    <li><a href="./admin-report-list.html">Report</a></li>
-                    <li><a href="./admin-cancelation-list.html">Cancelation</a></li>
-                    <li><a href="../login.html" class="text-[#FF0000] font-bold">LogOut</a> </li>
+                    <li><a href="./admin-home.php">Home</a></li>
+                    <li><a href="./admin-add-ticket.php">Add Ticket</a></li>
+                    <li><a href="./admin-transaction-history.php" class="text-[#1bd1a4]">Transaction History</a></li>
+                    <li><a href="./admin-report-list.php">Report</a></li>
+                    <li><a href="./admin-cancelation-list.php">Cancelation</a></li>
+                    <li><a href="../login.php" class="text-[#FF0000] font-bold">LogOut</a> </li>
                     <li class="w-10 rounded-full">
-                        <a href="./customer-profile.html">
+                        <a href="./customer-profile.php">
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-circle w-6 h-6"
                                 viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" fill="white" />

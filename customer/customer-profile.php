@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin Profile - UTMS</title>
+    <title>Profile - UTMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,18 +12,21 @@
         <!-- navbar -->
         <div class="navbar bg-[#242526] shadow-2xl">
             <div class="flex-1">
-                <a href="./admin-home.html" class="btn btn-ghost text-xl">UTMS</a>
+                <a href="./customer-home.php" class="btn btn-ghost text-xl">UTMS</a>
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal pl-1 pr-2 flex flex-row items-center">
-                    <li><a href="./admin-home.css">Home</a></li>
-                    <li><a href="./admin-add-ticket.html">Add Ticket</a></li>
-                    <li><a href="./admin-transaction-history.html">Transaction History</a></li>
-                    <li><a href="./admin-report-list.html">Report</a></li>
-                    <li><a href="./admin-cancelation-list.html">Cancelation</a></li>
-                    <li><a href="../login.html" class="text-[#FF0000] font-bold">LogOut</a> </li>
+                    <li><a href="./customer-home.php">Home</a></li>
+                    <li><a href="./customer-buy-ticket.php">Buy Ticket</a></li>
+                    <li><a href="./customer-discount-ticket.php" class="indicator border border-[#1bd1a4]">
+                            <span class="indicator-item badge bg-[#1bd1a4] text-white">new</span>
+                            Discount Ticket
+                        </a></li>
+                    <li><a href="./cutomer-ticket-history.php">Ticket History</a></li>
+                    <li><a href="./customer-history.php">Customer History</a></li>
+                    <li><a href="../login.php" class="text-[#FF0000] font-bold">LogOut</a> </li>
                     <li class="w-10 rounded-full">
-                        <a href="./customer-profile.html">
+                        <a href="./customer-profile.php">
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-circle w-6 h-6"
                                 viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" fill="#1bd1a4" />
@@ -57,24 +60,21 @@
             <h1 class="font-bold text-3xl">Personal Information:</h1>
             <div class="mt-5 text-lg">
                 <h3 class="flex flex-row gap-3 items-center my-2">
-                    <span>Full Name:</span> <input type="text" placeholder="Md. Kamrul Islam"
-                        class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
+                    <span>Full Name:</span> <input type="text" placeholder="Md. Kamrul Islam" class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
                 </h3>
                 <h3 class="flex flex-row gap-3 items-center my-2">
-                    <span>Date of Birth:</span> <input type="text" placeholder="27-02-2002"
-                        class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
+                    <span>Date of Birth:</span> <input type="text" placeholder="27-02-2002" class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
                 </h3>
                 <h3 class="flex flex-row gap-3 items-center my-2">
-                    <span>Email:</span>
+                    <span>Email:</span> 
                     <span class="text-[#1bd1a4]"> kamrul@google.com</span>
                 </h3>
                 <h3 class="flex flex-row gap-3 items-center my-2">
-                    <span>Password:</span> <input type="password" placeholder="*****"
-                        class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
+                    <span>Password:</span> <input type="password" placeholder="*****" class="input h-6 bg-transparent placeholder:text-[#1bd1a4]" />
                 </h3>
                 <h3 class="flex flex-row gap-3 items-center my-2">
-                    <span>Last Login Time:</span>
-                    <span class="text-[#1bd1a4]"> 03/11/2024, 09:30pm</span>
+                    <span>Last Login Time:</span> 
+                     <span class="text-[#1bd1a4]"> 03/11/2024, 09:30pm</span>
                 </h3>
             </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="form-control mt-2 pb-5">
             <button class="btn w-[10%] mx-auto bg-[#1bd1a4] text-white">Save Info</button>
             <i class="bi bi-0-square-fill"></i>
-        </div>
+          </div>
     </div>
 </body>
 
