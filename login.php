@@ -69,7 +69,7 @@
         </div>
 
         <div class="form-control mt-2 pb-5">
-          <button class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">Create Account</button>
+          <button class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">LogIn</button>
         </div>
       </div>
     </div>
