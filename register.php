@@ -33,7 +33,7 @@
                         <label class="label">
                             <span class="label-text">Full Name</span>
                         </label>
-                        <input type="text" placeholder="Enter your full name" class="input input-bordered" />
+                        <input name = "fullName" type="text" placeholder="Enter your full name" class="input input-bordered" />
                     </div>
                     <!-- <div class="form-control">
                         <label class="label">
@@ -45,13 +45,13 @@
                         <label class="label">
                             <span class="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="Enter your email" class="input input-bordered" />
+                        <input name="email" type="email" placeholder="Enter your email" class="input input-bordered" />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="Enter your password" class="input input-bordered" />
+                        <input name = "password" type="password" placeholder="Enter your password" class="input input-bordered" />
                     </div>
                     <div class="form-control">
                         <label class="label">
