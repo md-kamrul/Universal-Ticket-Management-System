@@ -27,7 +27,7 @@
             <div class="text-center lg:text-left">
                 <h1 class="text-5xl font-bold mb-5">Create Your Account</h1>
             </div>
-            <form action="signUp-process.php" method="post" class="card flex-shrink-0 w-[45%] mx-auto shadow-2xl bg-base-100">
+            <form action="./signUp-process.php" method="post" class="card flex-shrink-0 w-[45%] mx-auto shadow-2xl bg-base-100">
                 <div class="card-body">
                     <div class="form-control">
                         <label class="label">
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="form-control mt-2 pb-5">
-                    <button class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">Create Account</button>
+                    <button class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white" name="creates">Create Account</button>
                     <i class="bi bi-0-square-fill"></i>
                 </div>
             </form>
