@@ -10,6 +10,13 @@
 </head>
 
 <body class="text-white">
+    <?php
+
+    function ticket_history()
+    {
+        echo "Hello";
+    }
+    ?>
     <div class="w-full h-full bg-[#18191a] pb-10">
         <!-- navbar -->
         <div class="navbar bg-[#242526] shadow-2xl">
@@ -73,36 +80,29 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- row 1 -->
-                                <tr>
-                                    <th>Bus</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>55</td>
-                                    <td>500</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
-                                <!-- row 2 -->
-                                <tr>
-                                    <th>Train</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>150</td>
-                                    <td>250</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr>
-                                    <th>Plane</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>60</td>
-                                    <td>500</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
+
+                                <?php
+                                include('../admin/connect.php');
+                                $sqlSelect = "SELECT * FROM tickets";
+                                $result = mysqli_query($conn, $sqlSelect);
+                                while ($data = mysqli_fetch_array($result)) {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $data['ticket_type']; ?></td>
+                                        <td><?php echo $data['Description']; ?></td>
+                                        <td><?php echo $data['Total_amount_of_ticket']; ?></td>
+                                        <td><?php echo $data['ticket_price']; ?></td>
+                                        <td>
+                                            <button onclick="ticket_history()" class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
+                                                <a href="">Buy</a>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                <?php
+                                }
+                                ?>
+
                             </tbody>
                         </table>
                     </div>
@@ -126,39 +126,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- row 1 -->
-                                <tr>
-                                    <th>Bus</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>55</td>
-                                    <td>500</td>
-                                    <td>15%</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
-                                <!-- row 2 -->
-                                <tr>
-                                    <th>Train</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>150</td>
-                                    <td>250</td>
-                                    <td>10%</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
-                                <!-- row 3 -->
-                                <tr>
-                                    <th>Plane</th>
-                                    <td>Dhaka - Kishorganj</td>
-                                    <td>60</td>
-                                    <td>500</td>
-                                    <td>5%</td>
-                                    <td><button
-                                            class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">Buy</button>
-                                    </td>
-                                </tr>
+                                <?php
+                                $sqlSelect = "SELECT * FROM discount_tickets";
+                                $result = mysqli_query($conn, $sqlSelect);
+                                while ($data = mysqli_fetch_array($result)) {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $data['ticket_id']; ?></td>
+                                        <td><?php echo $data['Description']; ?></td>
+                                        <td><?php echo $data['Total_amount_of_Ticket']; ?></td>
+                                        <td><?php echo $data['Actual_price']; ?></td>
+                                        <td> <?php echo $data['Discount_amount']; ?>%</td>
+                                        <td>
+                                            <button onclick="ticket_history()" class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
+                                                <a href="">Buy</a>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                <?php
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -167,5 +155,4 @@
 
         </div>
 </body>
-
 </html>
