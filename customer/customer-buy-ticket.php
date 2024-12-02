@@ -57,7 +57,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                         <?php
                         include('../admin/connect.php');
                         $sqlSelect = "SELECT * FROM tickets";
@@ -85,5 +85,4 @@
 
         </div>
 </body>
-
 </html>
