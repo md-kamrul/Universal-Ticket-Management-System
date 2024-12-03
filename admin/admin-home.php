@@ -83,8 +83,8 @@
                                         <td><?php echo $data['Total_amount_of_ticket']; ?></td>
                                         <td><?php echo $data['ticket_price']; ?></td>
                                         <td>
-                                            <button onclick="ticket_history()" class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
-                                                <a href="">Edit</a>
+                                            <button class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
+                                                <a href="./admin-ticket-edit.php?id=<?php echo $data['Ticket_id']; ?>">Edit</a>
                                             </button>
                                         </td>
                                     </tr>
