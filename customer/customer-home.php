@@ -32,6 +32,7 @@
                             Discount Ticket
                         </a></li>
                     <li><a href="./cutomer-ticket-history.php">Ticket History</a></li>
+                    <li><a href="./customer-report.php">Report</a></li>
                     <li><a href="./customer-history.php">Customer History</a></li>
                     <li><a href="../login.php" class="text-[#FF0000] font-bold">LogOut</a> </li>
                     <li class="w-10 rounded-full">

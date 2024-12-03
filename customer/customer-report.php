@@ -45,10 +45,40 @@
         <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20 h-full">
 
             <h1 class="font-bold text-3xl mb-10">Report Your Complain</h1>
- 
-            
-        
-    </div>
+
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Rating</span>
+                        </label>
+                        <input type="text" placeholder="Rating" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Text</span>
+                        </label>
+                        <input type="text" placeholder="Text" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Date</span>
+                        </label>
+                        <input type="text" placeholder="Date" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Customer Id</span>
+                        </label>
+                        <input type="text" placeholder="Customer Id" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control mt-6">
+                        <button class="btn bg-[#1bd1a4] text-white">Report</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
 </body>
 
 </html>
