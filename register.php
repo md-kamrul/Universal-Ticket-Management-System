@@ -35,12 +35,6 @@
                         </label>
                         <input name="fullName" type="text" placeholder="Enter your full name" class="input input-bordered" />
                     </div>
-                    <!-- <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Profile Picture</span>
-                        </label>
-                        <input type="text" placeholder="Enter your profile picture" class="input input-bordered" />
-                    </div> -->
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Email</span>
@@ -87,8 +81,7 @@
                 </div>
 
                 <div class="form-control mt-2 pb-5">
-                    <button class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">Create Account</button>
-                    <i class="bi bi-0-square-fill"></i>
+                <input type="submit" name="create" value="Create Account" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
                 </div>
             </form>
         </div>

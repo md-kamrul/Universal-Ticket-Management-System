@@ -42,12 +42,12 @@
         </div>
 
         <!-- body -->
-        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20">
+        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20 h-full">
 
             <h1 class="font-bold text-3xl mb-10">Report Your Complain</h1>
-
+ 
             
-
+        
     </div>
 </body>
 
