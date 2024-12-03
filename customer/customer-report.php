@@ -42,41 +42,93 @@
         </div>
 
         <!-- body -->
-        <div class="w-[80%] mx-auto flex flex-col justify-center items-center pt-20 h-full">
+        <div class="w-[80%] h-full mx-auto flex flex-col justify-center items-center pt-20">
 
             <h1 class="font-bold text-3xl mb-10">Report Your Complain</h1>
 
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <form class="card-body">
+                <form class="card-body" action='customer-report.php' method='post'>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Report Id</span>
+                        </label>
+                        <input name='report_id' type="text" placeholder="Report ID" class="input input-bordered" required />
+                    </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Rating</span>
                         </label>
-                        <input type="text" placeholder="Rating" class="input input-bordered" required />
+                        <input name='rating' type="text" placeholder="Rating" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Text</span>
                         </label>
-                        <input type="text" placeholder="Text" class="input input-bordered" required />
+                        <input name='text' type="text" placeholder="Text" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Date</span>
                         </label>
-                        <input type="text" placeholder="Date" class="input input-bordered" required />
+                        <input name='date' type="text" placeholder="Date" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Customer Id</span>
                         </label>
-                        <input type="text" placeholder="Customer Id" class="input input-bordered" required />
+                        <input name='customer_id' type="text" placeholder="Customer Id" class="input input-bordered" required />
                     </div>
                     <div class="form-control mt-6">
-                        <button class="btn bg-[#1bd1a4] text-white">Report</button>
+                        <input type="submit" name="create" value="Report" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
                     </div>
                 </form>
             </div>
+            <?php
+            include('../admin/connect.php');
+            if (isset($_POST["create"])) {
+                $report_id = mysqli_real_escape_string($conn, $_POST["report_id"]);
+                $rating = mysqli_real_escape_string($conn, $_POST["rating"]);
+                $text = mysqli_real_escape_string($conn, $_POST["text"]);
+                $date = mysqli_real_escape_string($conn, $_POST["date"]);
+                $customer_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
+
+                $sqlInsert = "INSERT INTO report(report_id,rating,text,date,customer_id) VALUES ($report_id,$rating,'$text', '$date',$customer_id)";
+                if (mysqli_query($conn, $sqlInsert)) {
+                    //  die("Ok amar vul chilo na");
+                    echo '
+        
+        <!-- success pop up fuction -->
+        <section id="successPopUp">
+            <section class="success w-full h-screen flex flex-col justify-center items-center gap-8 font_inter px-5">
+                <img src="images/success.png" alt="" class="w-24">
+                <h1 class="text-[#27AE60] font-bold text-[24px] text-xl">
+                    SUCCESS
+                </h1>
+                <p class="text-center text-[#4A4A4A]">
+                    <span class="font-semibold">
+                        Thank you for Booking Our Bus Seats.
+                        <br>
+                        We are working hard to find the best service and deals for you.
+                    </span>
+                    <br>
+                    <br>
+                    <span class="font-medium">
+                        Shortly you will find a confirmation in your email.
+                    </span>
+                </p>
+                <button id="continue"
+                    class="btn w-48 rounded-3xl bg-[#27AE60] hover:bg-[#27AE60] text-white font-extrabold">
+                    Continue
+                </button>
+            </section>
+        </section>
+
+        ';
+                } else {
+                    die("Something went wrong");
+                }
+            }
+            ?>
 
         </div>
 </body>
