@@ -45,6 +45,16 @@
 
             <h1 class="font-bold text-3xl mb-10">Ticket History</h1>
 
+            <?php
+            include("./admin/connect.php");
+            if(isset($_GET['Ticket_id'])){
+                echo"ok";
+            }
+            else{
+                echo"not ok";
+            }
+            ?>
+
             <div class="overflow-x-auto w-full">
                 <table class="table table-zebra">
                     <!-- head -->
@@ -95,7 +105,7 @@
                 </table>
             </div>
 
-    </div>
+        </div>
 </body>
 
 </html>
