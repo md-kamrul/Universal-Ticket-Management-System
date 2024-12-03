@@ -17,7 +17,7 @@
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal pl-1 pr-2 flex flex-row items-center">
-                    <li><a href="./admin-cancelation-list.php">Home</a></li>
+                    <li><a href="./admin-home.php">Home</a></li>
                     <li><a href="./admin-add-ticket.php">Add Ticket</a></li>
                     <li><a href="./admin-transaction-history.php">Transaction History</a></li>
                     <li><a href="./admin-report-list.php">Report</a></li>
