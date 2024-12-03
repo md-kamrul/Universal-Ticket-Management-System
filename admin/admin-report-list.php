@@ -45,6 +45,38 @@
 
             <div class="w-full flex flex-col gap-10">
                 <div class="card bg-base-100 shadow-xl w-[70%] mx-auto">
+                    <?php
+                    include('../admin/connect.php');
+                    $sqlSelect = "SELECT * FROM report";
+                    $result = mysqli_query($conn, $sqlSelect);
+                    while ($data = mysqli_fetch_array($result)) {
+                        $sqlSelect = "SELECT * FROM customer";
+                        $result = mysqli_query($conn, $sqlSelect);
+                        while ($dataCustomer = mysqli_fetch_array($result)) {
+                            echo $data['customer_id'], $dataCustomer['customer_id'];
+                            if ($data['customer_id'] == $dataCustomer['customer_id']) {
+                                echo "paichi";
+                            } else {
+                                echo "pai nai";
+                            }
+                        }
+                    ?>
+                        <!-- <tr>
+                            <td><?php echo $data['report_id']; ?></td>
+                            <td><?php echo $data['rating']; ?></td>
+                            <td><?php echo $data['text']; ?></td>
+                            <td><?php echo $data['date']; ?></td>
+                            <td><?php echo $data['customer_id']; ?></td>
+                            <td>
+                                <button class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
+                                    <a href="./admin-ticket-edit.php?id=<?php echo $data['Ticket_id']; ?>">Edit</a>
+                                </button>
+                            </td>
+                        </tr> -->
+
+                    <?php
+                    }
+                    ?>
                     <div class="card-body">
                         <div class="flex flex-row gap-3 items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
