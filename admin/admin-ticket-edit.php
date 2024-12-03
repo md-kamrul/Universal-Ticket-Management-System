@@ -61,7 +61,6 @@
                         $total_amount_of_ticket = $data[4];
                         $ticket_price = $data[5];
                         $ticket_type = $data[6];
-                        // echo $id, $data[1];
 
                         echo '
                         
@@ -71,7 +70,7 @@
                             <label class="label">
                                 <span class="label-text">Ticket ID</span>
                             </label>
-                            <input name="ticket_id" value="'. $ticket_id.'" type="text" placeholder="Ticket Id" class="input input-bordered"  disabled/>
+                            <input name="ticket_id" value="'. $ticket_id.'" type="text" placeholder="Ticket Id" class="input input-bordered" />
                         </div>
                         <div class="form-control">
                             <label class="label">
@@ -84,7 +83,7 @@
                             <label class="label">
                                 <span class="label-text">Status</span>
                             </label>
-                            <input name="statu"  value="'.$status.'" type="text" placeholder="Status" class="input input-bordered" />
+                            <input name="status"  value="'.$status.'" type="text" placeholder="Status" class="input input-bordered" />
                         </div>
                         <div class="form-control">
                             <label class="label">
@@ -109,22 +108,22 @@
                                 <option disabled selected>Ticket Type</option>
                                 <option value="Bus" <?php if ($data["ticket_type"] == "Bus") {
                                                         echo "selected";
-                                                    } ?>>Bus</option>
+                                                    } ?>Bus</option>
                                 <option value="Train" <?php if ($data["ticket_type"] == "Train") {
                                                             echo "selected";
-                                                        } ?>>Train</option>
+                                                        } ?>Train</option>
                                 <option value="Plane" <?php if ($data["ticket_type"] == "Plane") {
                                                             echo "selected";
-                                                        } ?>>Plane</option>
+                                                        } ?>Plane</option>
                                 <option value="Launch" <?php if ($data["ticket_type"] == "Launch") {
                                                             echo "selected";
-                                                        } ?>>Launch</option>
+                                                        } ?>Launch</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-control mt-2 pb-5">
-                        <input type="submit" name="edit" value="Add Ticket" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
+                        <input type="submit" name="edit" value="Edit Ticket" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
                     </div>
                 </form>
 

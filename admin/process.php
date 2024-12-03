@@ -9,6 +9,7 @@ if (isset($_POST["create"])) {
     $ticket_price = mysqli_real_escape_string($conn, $_POST['ticket_price']);
     $ticket_type = mysqli_real_escape_string($conn, $_POST["ticket_type"]);
     $sqlInsert = "INSERT INTO tickets(ticket_id, description,status,priority,total_amount_of_ticket,ticket_price,ticket_type) VALUES ($ticket_id,'$description','$status', '$priority',$total_amount_of_ticket,$ticket_price,'$ticket_type')";
+    echo $sqlInsert ;
     if (mysqli_query($conn, $sqlInsert)) {
         // die("Ok amar vul chilo na");
         echo '
@@ -42,19 +43,15 @@ if (isset($_POST["create"])) {
 }
 
 if (isset($_POST["edit"])) {
-    $id = $_GET['id'];
-    $ticket_id = $id;
+    $ticket_id = mysqli_real_escape_string($conn, $_POST["ticket_id"]);
     $description = mysqli_real_escape_string($conn, $_POST["description"]);
     $status = mysqli_real_escape_string($conn, $_POST["status"]);
     $priority = mysqli_real_escape_string($conn, $_POST["priority"]);
     $total_amount_of_ticket = mysqli_real_escape_string($conn, $_POST['total_amount_of_ticket']);
     $ticket_price = mysqli_real_escape_string($conn, $_POST['ticket_price']);
     $ticket_type = mysqli_real_escape_string($conn, $_POST["ticket_type"]);
-    $sqlInsert = "UPDATE tickets SET ticket_id = $ticket_id, description = '$description',status = '$status',priority = '$priority',total_amount_of_ticket = $total_amount_of_ticket,ticket_price = $ticket_price,ticket_type = '$ticket_type'";
-    echo $_GET['id'];
-    echo $sqlInsert;
-    if (mysqli_query($conn, $sqlInsert)) {
-        // die("Ok amar vul chilo na");
+    $sql = "UPDATE tickets SET Description = '$description',Status = '$status', Priority = '$priority',Total_amount_of_ticket = $total_amount_of_ticket,ticket_price = $ticket_price,ticket_type = '$ticket_type' WHERE Ticket_id = $ticket_id";
+    if (mysqli_query($conn, $sql)) {
         echo '
         
         <!-- success pop up fuction -->
