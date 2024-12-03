@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="form-control mt-2 pb-5">
-                <input type="submit" name="create" value="Create Account" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
+                    <input type="submit" name="create" value="Create Account" class="btn w-[80%] mx-auto bg-[#1bd1a4] text-white">
                 </div>
             </form>
         </div>

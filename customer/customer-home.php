@@ -94,7 +94,7 @@
                                         <td><?php echo $data['ticket_price']; ?></td>
                                         <td>
                                             <a href="./cutomer-ticket-history.php?id=<?php echo $data['Ticket_id']; ?>" class="btn bg-transparent text-[#1bd1a4] border border-[#1bd1a4] hover:border-[#1bd1a4]">
-                                                    Buy
+                                                Buy
                                             </a>
                                         </td>
                                     </tr>
