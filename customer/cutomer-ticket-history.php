@@ -46,13 +46,7 @@
 
             <h1 class="font-bold text-3xl mb-10">Ticket History</h1>
 
-            <?php
-            $id = $_GET['id'];
-            if (isset($_GET['id'])) {
-                echo "dpe";
-                echo $id;
-            }
-            ?>
+
 
             <div class="overflow-x-auto w-full">
                 <table class="table table-zebra">
@@ -61,45 +55,36 @@
                         <tr class="font-bold text-black">
                             <th>Ticket Type</th>
                             <th>Route</th>
-                            <th>Amount of Ticket</th>
                             <th>Price per Ticket</th>
-                            <th>Total Amount</th>
+                            <th>Date</th>
+                            <th>Ticket ID</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- row 1 -->
-                        <tr>
-                            <th>Bus</th>
-                            <td>Dhaka - Kishorganj</td>
-                            <td>5</td>
-                            <td>500</td>
-                            <td>2500</td>
-                            <td><button
-                                    class="btn bg-transparent text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000]">Cancle</button>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <th>Train</th>
-                            <td>Dhaka - Kishorganj</td>
-                            <td>1</td>
-                            <td>250</td>
-                            <td>250</td>
-                            <td><button
-                                    class="btn bg-transparent text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000]">Cancle</button>
-                            </td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <th>Plane</th>
-                            <td>Dhaka - Kishorganj</td>
-                            <td>1</td>
-                            <td>500</td>
-                            <td>500</td>
-                            <td><button
-                                    class="btn bg-transparent text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000]">Cancle</button>
-                            </td>
-                        </tr>
+
+                        <?php
+                        include('../admin/connect.php');
+                        $sqlSelect = "SELECT * FROM ticket_history";
+                        $result = mysqli_query($conn, $sqlSelect);
+                        while ($data = mysqli_fetch_array($result)) {
+                        ?>
+                            <tr>
+                                <td><?php echo $data['Ticket_type']; ?></td>
+                                <td><?php echo $data['Description']; ?></td>
+                                <td><?php echo $data['Ticket_price']; ?></td>
+                                <td><?php echo $data['Date']; ?></td>
+                                <td><?php echo $data['Ticket_ID']; ?></td>
+                                <td>
+                                    <a href="./cutomer-cancel.php?id=<?php echo $data['Ticket_ID']; ?>" class="btn bg-transparent text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000]">
+                                        Cancel
+                                    </a>
+                                </td>
+                            </tr>
+
+                        <?php
+                        }
+                        ?>
+
                     </tbody>
                 </table>
             </div>
